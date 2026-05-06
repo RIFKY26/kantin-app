@@ -3,10 +3,10 @@ kind: Ingress
 metadata:
   name: kantin-ingress
   annotations:
-    # Ini sangat penting agar rute /api bekerja
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    # Hapus atau beri komentar pada rewrite-target jika rute di Flask sudah lengkap dengan /api
+    # nginx.ingress.kubernetes.io/rewrite-target: / 
+    kubernetes.io/ingress.class: nginx
 spec:
-  ingressClassName: nginx
   rules:
   - http:
       paths:
