@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: kantin-ingress
   annotations:
+    # Ini sangat penting agar rute /api bekerja
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
